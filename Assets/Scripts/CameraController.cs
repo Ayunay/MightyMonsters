@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform camera;
-    [SerializeField] private Transform character;
+    private Transform camera;
+    private Transform character;
 
     [SerializeField][Range(0f, 1f)] private float smoothing;
 
     private Vector3 camVel;
+
+    private void Awake()
+    {
+        character = GameObject.FindGameObjectWithTag("Player").transform;
+        camera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+    }
 
     private void LateUpdate()
     {
