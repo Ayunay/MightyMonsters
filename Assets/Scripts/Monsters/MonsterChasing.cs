@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class MonsterController : MonoBehaviour
+public class MonsterChasing : MonoBehaviour
 {
     private Rigidbody2D rb;
 
