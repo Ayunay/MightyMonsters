@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _cooldown;
     [SerializeField] private ProjectileSpawnScript projectileSpawn;
-    [SerializeField] private Rigidbody2D _spawn;
+    [SerializeField] private Transform _projectileSpawn;
 
     private Rigidbody2D _rb;
     private Vector2 _moveVal;
@@ -28,12 +28,12 @@ public class PlayerScript : MonoBehaviour
     private void Update()
     {
         MouseDirection();
+        ShootDirection();
     }
 
     private void FixedUpdate()
     {
         Move();
-        ShootDirection();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -63,9 +63,11 @@ public class PlayerScript : MonoBehaviour
 
     private void ShootDirection()
     {
-        _aimDirection = _mousePosition - _spawn.position;
-        _aimAngel = Mathf.Atan2(_aimDirection.y * Time.fixedDeltaTime, _aimDirection.x * Time.fixedDeltaTime) * Mathf.Rad2Deg;
-        _spawn.rotation = _aimAngel;
+        _aimDirection = _mousePosition - new Vector2(_projectileSpawn.position.x,_projectileSpawn.position.y);
+        _aimAngel = Mathf.Atan2(_aimDirection.y , _aimDirection.x ) * Mathf.Rad2Deg;
+        Quaternion currentRotation = _projectileSpawn.rotation;
+        currentRotation.eulerAngles = new Vector3(0, 0, _aimAngel);
+        _projectileSpawn.rotation = currentRotation;
     }
 
     private void runCooldown()
