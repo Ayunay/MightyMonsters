@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
     private Vector2 _moveVal;
     private Vector2 _mousePosition;
     private Vector2 _aimDirection;
-    private float _aimAngel;
+    private float _aimAngle;
     private bool _shootCooldown;
 
 
@@ -64,9 +64,9 @@ public class PlayerScript : MonoBehaviour
     private void ShootDirection()
     {
         _aimDirection = _mousePosition - new Vector2(_projectileSpawn.position.x,_projectileSpawn.position.y);
-        _aimAngel = Mathf.Atan2(_aimDirection.y , _aimDirection.x ) * Mathf.Rad2Deg;
+        _aimAngle = Mathf.Atan2(_aimDirection.y , _aimDirection.x ) * Mathf.Rad2Deg;
         Quaternion currentRotation = _projectileSpawn.rotation;
-        currentRotation.eulerAngles = new Vector3(0, 0, _aimAngel);
+        currentRotation.eulerAngles = new Vector3(0, 0, _aimAngle);
         _projectileSpawn.rotation = currentRotation;
     }
 

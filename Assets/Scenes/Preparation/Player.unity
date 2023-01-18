@@ -130,22 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 208681755, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-      propertyPath: _firePoint
-      value: 
-      objectReference: {fileID: 1013285875}
-    - target: {fileID: 208681755, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-      propertyPath: _projectileForce
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 915305573, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 915305573, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1000013234968400, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
       propertyPath: m_Name
       value: Rogue_03
@@ -194,26 +178,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4486054738124579807, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579237937547000542, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-      propertyPath: _spawn
-      value: 
-      objectReference: {fileID: 1627114316}
-    - target: {fileID: 7579237937547000542, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-      propertyPath: _projectileSpawn
-      value: 
-      objectReference: {fileID: 1627114316}
-    m_RemovedComponents:
-    - {fileID: 5548447580352971678, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
---- !u!4 &1013285875 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4486054738124579807, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-  m_PrefabInstance: {fileID: 945518379}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520853288
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,8 +264,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1627114316 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5972836504422075848, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
-  m_PrefabInstance: {fileID: 945518379}
-  m_PrefabAsset: {fileID: 0}
